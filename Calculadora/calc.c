@@ -1,3 +1,18 @@
+/*
+- Autor: Arthur Ramos Vieira
+- Algoritmo de Média Ponderada e Nota Final
+    1° pergunta o nome
+    2° pergunta quantas matérias tem no semestra
+    3° pergunta quantos créditos tem cada uma
+    4° pergunta as notas de cada crédito e guarda em uma matriz
+    5° tira a média de cada crédito
+    6° mostra as médias
+    7° ve se passou ou não
+    8° se não, calcula quanto precisa na final e mostra
+*/
+
+
+//Bibliotecas utilizadas
 #include <stdio.h>
 #include <string.h>
 
@@ -58,11 +73,13 @@ int main(){
     float notas_materia[qtd_mat];
 
 
-    //preenchendo a matriz com Zeros
+    //preenchendo a matriz com Zeros para evitar lixo de memória
     for(int c = 0; c < maior_credito; c++){
         for(int v = 0; v < qtd_mat; v++){
             notas[c][v] = 0.0;
         }
+        //preeenchendo as notas com zero para evitar lixo de memória
+        notas_materia[c] = 0.0;
     }
 
     // Ler os valores da matriz coluna por coluna
@@ -81,7 +98,7 @@ int main(){
         }
     }
 
-    int materias_perdidas[qtd_mat];
+    float materias_perdidas[qtd_mat];
 
     //Mostrando o resultado
     printf("-----------------------------------------------\n");
@@ -90,10 +107,10 @@ int main(){
         float media = notas_materia[d] / creditos[d];
 
         if(media >= 7.0){
-            printf("Materia %d <-> " BG_WHITE GREEN "Média %.2f" RESET"\n", d+1, media);
+            printf("Materia %d <-> " BG_WHITE GREEN "Média %.1f" RESET"\n", d+1, media);
             materias_perdidas[d] = 7.1;
         }else{
-            printf("Materia %d <-> " BG_WHITE RED "Média %.2f" RESET "\n", d+1, media);
+            printf("Materia %d <-> " BG_WHITE RED "Média %.1f" RESET "\n", d+1, media);
             materias_perdidas[d] = media;
         }
     }
@@ -109,7 +126,7 @@ int main(){
     for(int count = 0; count < qtd_mat; count++){
         if(materias_perdidas[count] < 7.0){
             final = (5 - (materias_perdidas[count] * 0.6)) / 0.4;
-            printf("Vi que você perdeu na Matéria %d | Você precisa tirar %.2f na final para passar!!\n", count+1, final);
+            printf("Vi que você perdeu na Matéria %d | Você precisa tirar %.1f na final para passar!!\n", count+1, final);
         }
     }
 
