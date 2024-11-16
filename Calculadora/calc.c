@@ -27,6 +27,8 @@
 
 // Códigos de cores de fundo
 #define BG_WHITE       "\033[47m"
+#define BG_RED         "\033[41m"
+#define BG_GREEN       "\033[42m"
 
 
 int maiorCredito(int credito[], int tamanho); 
@@ -126,7 +128,9 @@ int main(){
     for(int count = 0; count < qtd_mat; count++){
         if(materias_perdidas[count] < 7.0){
             final = (5 - (materias_perdidas[count] * 0.6)) / 0.4;
-            printf("Vi que você perdeu na Matéria %d | Você precisa tirar %.1f na final para passar!!\n", count+1, final);
+            printf(BG_RED " " RESET " Vi que você perdeu na Matéria %d | Você precisa tirar " BG_WHITE BLACK "%.1f" RESET " na final para passar!!\n", count+1, final);
+        }else{
+            printf(BG_GREEN " " RESET " Vi que você passou na Matéria %d, meus parabêns!!\n", count+1);
         }
     }
 
