@@ -116,9 +116,6 @@ int main(){
     return 0;
 }
 
-
-
-
 //Função que retorna qual o maior credito para criar a matriz de notas
 int maiorCredito(int credito[], int tamanho) {
     int maior = credito[0];
