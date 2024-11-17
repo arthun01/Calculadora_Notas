@@ -1,0 +1,1 @@
+O algoritmo Calculadora_Notas é um programa que fiz em C que recebe o nome do usuário, quantas matérias ele tem, quantos créditos tem cada matéria e as notas da pessoa nas matérias, ele tira a média, vê se o usuário passou na matéria ou se não passou, se não passou ele faz o cálculo de quanto o estudante precisa tirar na Prova Final para conseguir passar na matéria.
