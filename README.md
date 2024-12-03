@@ -18,14 +18,11 @@ Você pode instalar seguindo os seguintes tutoriais:
 #### 2- Acesse a pasta do repositório
 `cd Calculadora_Notas`
 
-#### 3- Acesse a pasta da calculadora dentro do repositório
-`cd Calculadora`
-
-#### 4- Copile o projeto
-`gcc Calculadora -o`
+#### 3- Copile o projeto juntamente com a(s) biblioteca(s) estática(s)
+`gcc Calculadora/calc.c -o calc -Ilibs -Llibs -lcores`
 
 #### 4- Rode!!
-`./a.out`
+`./calc.out`
 
 
 ## 💻​ Tecnologias Usadas
