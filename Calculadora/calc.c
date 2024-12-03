@@ -15,20 +15,7 @@
 //Bibliotecas utilizadas
 #include <stdio.h>
 #include <string.h>
-
-// Códigos de reset
-#define RESET          "\033[0m"
-
-// Códigos de cores de texto
-#define BLACK          "\033[30m"
-#define RED            "\033[31m"
-#define GREEN          "\033[32m"
-#define WHITE          "\033[37m"
-
-// Códigos de cores de fundo
-#define BG_WHITE       "\033[47m"
-#define BG_RED         "\033[41m"
-#define BG_GREEN       "\033[42m"
+#include "cores.h"
 
 
 int maiorCredito(int credito[], int tamanho); 
