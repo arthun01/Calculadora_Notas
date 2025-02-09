@@ -1,6 +1,5 @@
 # 🧮​ Calculadora_Notas
 O programa está melhor explicado em `algoitmo.md` file.
-teste
 
 ## Rodar o Programa
 #### Instalar o Copilador C
