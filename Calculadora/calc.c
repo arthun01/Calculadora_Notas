@@ -18,6 +18,7 @@
 #include "cores.h"
 
 
+
 int maiorCredito(int credito[], int tamanho); 
 
 int main(){
